@@ -1,6 +1,5 @@
 import array as arr
 
-
 # Array'de veri arama
 def search(x):
     # Array oluşturma
@@ -9,10 +8,10 @@ def search(x):
     # Sayaçları deklare ederiz.
     cCounter = 0  # Komut satırından alınan değerin tespiti için sayaç
 
-    # Index değeri ile array'de veri arama
+    #  Değeri verilmiş verinin index'ini arama
     for k in numbers:
-        if cCounter == x:
-            print(f'Girdiginiz index degerindeki sayı: {k}')
+        if k == x:
+            print(f'Girdiginiz degerin index sayısı: {cCounter}')
             break
         else:
             cCounter += 1
@@ -134,9 +133,33 @@ def deleteSecondWay(x):
 # deleteSecondWay(4)
 
 """
-Array'ler statik yapıdadırlar. Array'ler, verileri düzenli bir şekilde saklamak ve erişmek için kullanışlıdır. 
-Ancak, dizilerin sabit boyutta olması ve genişlemeleri zorlaştırması gibi bazı kısıtlamalara da sahiptirler. 
-Bu nedenle, bazı durumlarda dinamik dizi veya liste gibi veri yapıları tercih edilebilir.
+Array'ler statik yapıdadırlar. Verileri hafızada yan yana sıralı bir şekilde tutmamızı sağlar. 
+Bu da veri aramada en hızlı şekilde cevap döndürülmesini sağlayacak yapıdır.
+Ancak, dizilerin sabit boyutta olması ve veri ekleme işlemini zorlaştırması gibi bazı kısıtlamalara da sahiptirler. 
+Bu nedenle, veri boyutunun bilinmedği durumlarda dinamik veri yapıları tercih edilebilir.
+
+Veri Ekleme;
+Yukarıda yaptığımız gibi veri ekleme işlemi yapabiliriz ama bunu yapabilmek için elimizdeki array'in boyutundan,
+eklemek istediğimiz veri adeti kadar artırılmış boyutta başka bir dizi oluşturmalıyız.
+Elimizdeki verileri ve eklenicek verileri de bu yeni diziye eklemeliyiz.
+Veri ekleme işlemini bu şekilde yapabiliriz.
+
+Veri Silme;
+Silme metodunu iki farklı şekilde gerçekleştirdik ilk versiyonda veri silindiğinde var olan dizide istenen index'deki
+veri silinir ve dizide elemanlar kaydırılarak en son eleman boşaltılır ve dizi boyutunun aynı kalması sağlanır.
+
+İkinci yöntemde ise veriyi sileriz ve index sayısı var olan diziden eksik olan bir dizi oluştururuz.
+Oluşturulan yeni diziye geriye kalan verileri atarız.
+
+Bu iki yöntem arasında ki farklar;
+İlk yöntemde dizi boyutu değişmez ve işlem ikinci yönteme göre hızlıdır.Fakat RAM' de fazladan yer tutmamıza sebep olur.
+İkinci yöntemde ise yeni bir dizi oluştururuz. Bu da çalışma hızını etkiler.
+
+Veri arama;
+Bu işlemi yaparken sorgulanan verinin tutulduğu yeri(index'ini) ararken dizinin içinde gezerek istenen verinin hangi index'de tutulduğunu buluruz. 
+
+Veriye erişim;
+Bu işlemi yaparken array verilerin nerede olduğunu bildiği için index numarasıyla direkt olarak erişim sağlarız.
 
 Metodlar;
 
@@ -156,18 +179,5 @@ Access (Erişim): Bu metod, dizinin belirli bir indeksindeki elemana erişmek i�
 Bu işlem genellikle O(1) karmaşıklığa sahiptir çünkü diziler, indeksleme işlemini hızlı bir şekilde gerçekleştirir.
 
 Bu metodlar, array veri yapısının temel işlemleridir ve array'lerin birçok algoritma ve problem çözümünde 
-kullanılmasını sağlar. Örneğin, belirli bir indeksteki bir elemana hızlıca erişim gerektiğinde diziler kullanışlıdır.
-
-Silme metodunu iki farklı şekilde gerçekleştirdik ilk versiyonda veri silindiğinde var olan dizide istenen index'deki
-veri silinir ve dizide elemanlar kaydırılarak en son eleman boşaltılır ve dizi boyutunun aynı kalması sağlanır.
-
-İkinci yöntemde ise veriyi sileriz ve index sayısı var olan diziden eksik olan bir dizi oluştururuz.
-Oluşturulan yeni diziye geriye kalan verileri atarız.
-
-Bu iki yöntem arasında ki farklar;
-İlk yöntemde dizi boyutu değişmez ve işlem ikinci yönteme göre hızlıdır.Fakat RAM' de fazladan yer tutmamıza sebep olur.
-İkinci yöntemde ise yeni bir dizi oluştururuz. Bu da çalışma hızını etkiler.
-
-
-
+kullanılmasını sağlar.
 """
