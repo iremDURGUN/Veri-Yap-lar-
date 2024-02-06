@@ -1,18 +1,24 @@
-## Veri-Yapilari
+# Veri-Yapilari
 
-- Veri yapıları, programlama dillerinde kullanılan veri organizasyonlarıdır. Bu yapılar, verileri etkili bir şekilde saklamak, erişmek ve işlemek için tasarlanmıştır. Örnek olarak veri yapıları arasında array, linked list, tree, stack ve queue bulunur.
+- Veri yapıları, programlama dillerinde kullanılan veri organizasyonlarıdır Verileri düzenlemek, hızlı erişim sağlamak ve veri üstünde işlem yapmak için kullanılır. Veri yapıları arasında array, linked list, tree, stack ve queue bulunur. Örneğin, veritabanlarında, işletim sistemlerinde, bilgisayar grafiklerinde ve yapay zeka sistemlerinde veri yapıları kullanılır.
 
-- Verileri düzenlemek, hızlı erişim sağlamak ve işlem yapmak için kullanılır. Örneğin, veritabanlarında, işletim sistemlerinde, bilgisayar grafiklerinde ve yapay zeka sistemlerinde veri yapıları kullanılır.
+#### Statik Veri Yapıları: Bu yapıları oluştururken boyutunu belirleriz ve sonradan oluşturduğumuz yapının boyutunu artıramayız veya azaltamayız. Bu yapıya oluştururken verilen boyut kadar veri girişi yapabiliriz, oluşturduğumuz yapı daha fazla veri girişi yapmamıza izin vermez. Veriler hafızada yanyana ve sıralı şekilde yer tutarlar. Eğer sabit sayıda bir veri ögeniz varsa ve veriye hızlı bir şekilde ulaşım sağlamak istiyorsanız statik veri yapılarını tercih etmeliziniz çünkü bu yapı verinin hafızada nerede tutulduğunu bilir. Örneğin, array'ler statik bir veri yapısıdır.
 
-- Statik Veri Yapıları: Boyutu derleme zamanında tahsis edilen veri yapılarıdır. Maksimum boyut sabittir. Örneğin, diziler statik bir veri yapısıdır.
+#### Dinamik Veri Yapıları: Bu yapıları oluştururken boyut belirtmeden oluştururuz. Bu yapıların boyutları hafızada istedikleri kadar genişleyebilir. Hafızada dağınık şekilde tutulurlar. Eğer veri ögenizin boyutunu bilmiyorsanız ve sürekli bir veri girişi-çıkışı olucaksa dinamik veri yapılarından birini tercih etmelisiniz. Örneğin, linked list ve tree dinamik veri yapılarına örnek olarak verilebilir.
 
-- Dinamik Veri Yapıları: Boyutu çalışma zamanında tahsis edilen veri yapılarıdır. Maksimum boyut esnektir. Dinamik veri yapıları, gerektiğinde bellek tüketme veya mümkün olduğunda gelişmiş verimlilik için belleği boşaltma esnekliğine sahiptir. Örneğin, bağlı listeler ve ağaçlar dinamik veri yapılarına örnek olarak verilebilir.
+- #### Veri Yapıları;
+##### Arrays (Statik)
+##### Stack (Dinamik)
+##### Queue (Dinamik)
+##### Linked List (Dinamik)
+##### Map(Dictionary) (Dinamik)
 
-Bu kategorizasyon, veri yapılarının bellek yönetimi ve boyut esnekliği açısından farklı yaklaşımları ifade eder. Statik veri yapıları, sabit sayıda veri öğesinin depolanması için idealdir. Ancak dinamik veri yapıları, veri öğelerinin sayısı önceden tahmin edilemediğinde veya bellek kullanımının esnek olması gerektiğinde tercih edilir.
 
-Veri yapılarının avantajları şunlardır:
+#### Veri yapılarının avantajları şunlardır;
+1) Verimlilik: Veri yapıları, verilerin etkili bir şekilde depolanmasını ve alınmasını sağlar.
+2) Esneklik: Veri yapıları, verileri kolayca düzenlemek ve veri giriş-çıkışı sağlamak için esneklik sağlar.
+3) Yeniden Kullanılabilirlik: Veri yapıları, birden fazla programda kullanılabilir ve aynı işlem için her seferinde kod yazma ihtiyacını azaltır.
+4) Bakım Kolaylığı: İyi tasarlanmış veri yapıları, programları anlamak, değiştirmek ve bakımını yapmak için kolaylaştırır.
 
-- Verimlilik: Veri yapıları, verilerin etkili bir şekilde depolanmasını ve alınmasını sağlar.
-- Esneklik: Veri yapıları, verileri kolayca düzenlemek ve değiştirmek için esnek bir yol sunar.
-- Yeniden Kullanılabilirlik: Veri yapıları, birden fazla programda kullanılabilir ve tekrarlayan kod ihtiyacını azaltır.
-- Bakım Kolaylığı: İyi tasarlanmış veri yapıları, programları anlamak, değiştirmek ve bakımını yapmak için kolaylaştırır.
+
+### Veri yapılarınının nasıl oluşturulduğunun, search(veri arama), delete(veri silme), append(veri ekleme) işlemlerinin ayrı ayrı her veri yapısında nasıl yapıldığının açıklaması yukarıda -dosyalarda- anlatılmıştır.
