@@ -48,12 +48,11 @@ my_queue.enqueue(30)
 print(my_queue.dequeue())  # 10
 
 """
-Bir queue (kuyruk), verilerin eklenip çıkarıldığı, ilk eklenen elemanın ilk çıkarıldığı (FIFO - First In, First Out) 
-ve dinamik bir veri yapısıdır. Queue, bir düzen içinde sıralı olarak gelen verileri işlemek için kullanılır. 
+Bir queue (kuyruk),  ilk eklenen elemanın ilk çıkarıldığı (FIFO - First In, First Out) ve dinamik bir veri yapısıdır.
+Queue, bir düzen içinde sıralı olarak gelen verileri işlemek için kullanılır. 
 Queue, genellikle işlemlerin belirli bir sıra ile gerçekleştirilmesi gerektiği durumlarda kullanılır.
-Kaç elemanlı olduğu bilinmez. 
-Örneğin, işlem sırasını bekleyen verileri sırayla işlemek veya verilerin sırasıyla işlenmesi gereken 
-bir işlem kuyruğu yönetmek için kullanılabilir. 
+Kaç elemanlı olduğu bilinmez çünkü yapı sadece en baştaki verinin değerini bilir. 
+Örneğin, işlem sırasını bekleyen verileri sırayla işlemek veya verilerin sırasıyla işlenmesi gereken bir işlem kuyruğu yönetmek için kullanılabilir.
 Queue, çeşitli uygulamalarda ve algoritmaların implementasyonunda yaygın olarak kullanılan önemli bir veri yapısıdır.
 
 Metodlar;
@@ -85,8 +84,5 @@ müşteriye hizmet eder (dequeue işlemi). Bu durumda, ilk gelen müşteri (yani
 
 Bu prensip, birçok algoritma ve veri yapısında kullanılır. Örneğin, bir işletim sisteminin iş planlama (scheduling)
 algoritmaları, genellikle FIFO prensibini kullanır. İşler, işlemciye ilk gelen ilk işlenir prensibiyle sıraya alınır. 
-Aynı şekilde, genişlik öncelikli arama (BFS - Breadth First Search) algoritması da FIFO prensibini kullanır. 
-BFS, bir düğümü ziyaret ettiğinde, tüm komşularını bir kuyruğa ekler ve daha sonra kuyruğun başındaki 
-(yani ilk eklenen) düğümü ziyaret eder. Bu, BFS’nin bir ağacın veya grafiğin genişliklerine öncelik vermesini sağlar.
-Bu nedenle, hangi veri yapısının kullanılacağına karar verirken, uygulamanın gereksinimlerini dikkate almak önemlidir.
+
 """
