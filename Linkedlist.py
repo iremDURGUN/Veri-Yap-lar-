@@ -77,13 +77,16 @@ print(new_linkedlist.search('f'))  # çıktı: False
 
 """
 
-linked list (bağlı liste), verilerin düğümler adı verilen yapılar aracılığıyla bağlı olduğu bir veri yapısıdır. 
+Linked list (bağlı liste), verilerin düğümler adı verilen yapılar aracılığıyla bağlı olduğu bir veri yapısıdır. 
 Her düğüm, bir veri elemanını (değer) ve bir sonraki düğümün referansını (link veya bağlantı) içerir. 
 Linked list'ler, verilerin eklenmesi ve çıkarılması konusunda esneklik sağlar ve dinamik bir yapıya sahiptir.
 Hafızada istediği kadar genişler.
-Temelde iki tür linked list vardır;
-tek yönlü linked list (singly linked list) 
-ve çift yönlü linked list (doubly linked list)
+
+Temelde üç tür linked list vardır;
+Tek yönlü linked list (singly linked list) : Tek yönlü linked list yukardada anlatıldığı gibi temel linked list yapısıdır.
+Çift yönlü linked list (doubly linked list) : Çift linked list'de her veri hem kendinden önceki hem de sonraki veri değerini tanır.
+Dairesel linked list (circular linked list) : Dairesel linked list'de akış yine tek yönlüdür 
+ama linked list'deki son veri ve baştaki veri birbirlerine bağlıdır.
 
 Düğüm (Node): Veri elemanını (değer) ve bir sonraki düğümün referansını içerir.
 
@@ -103,7 +106,7 @@ Delete(Silme): Linked List'in başından veya sonundan bir eleman silmek O(1) ka
 Ancak, listenin ortasından bir eleman silmek O(n) karmaşıklığa sahiptir çünkü silmek istediğimiz 
 konuma kadar liste taranmalıdır.
 
-Arama: Linked List'de bir elemanı aramak O(n) karmaşıklığa sahiptir çünkü en kötü durumda tüm liste taranmalıdır.
+Search(Arama): Linked List'de bir elemanı aramak O(n) karmaşıklığa sahiptir çünkü en kötü durumda tüm liste taranmalıdır.
 Veri aramaya head'den başlanır bü yüzden arama yapmak zordur.
 
 """
