@@ -41,7 +41,7 @@ print(my_stack.peek())  # 10
 Stack, dinamik veri yapılarından biridir ve LIFO (Last In First Out - Son Giren İlk Çıkar) prensibine göre çalışır.
 Bu, stack’e eklenen son öğenin, çıkarılan ilk öğe olacağı anlamına gelir.
 Stack'te serbestçe gezilemez ve arama işlemi yapmak zordur. 
-Stack’ler, bir dizi uygulamada kullanılır. Örneğin, bir programın fonksiyon çağrılarını takip etmek için kullanılır. 
+Örneğin, bir programın fonksiyon çağrılarını takip etmek için kullanılır. 
 Bir fonksiyon çağrıldığında, çağrının detayları bir stack’e “push” edilir ve fonksiyon tamamlandığında,
 bu detaylar stack’ten “pop” edilir. Bu, programın hangi fonksiyonun sıradaki olduğunu bilmesini sağlar.
 Stack, özellikle veri manipülasyonu sırasında kullanışlı bir veri yapısıdır ve pek çok algoritma 
@@ -76,9 +76,7 @@ ve bir kitap almak istediğimizde yığının en üstündeki kitabı alıyoruz (
 Bu prensip, birçok algoritma ve veri yapısında kullanılır. Örneğin, bir programın çağrı yığını (call stack), 
 bir fonksiyon çağrıldığında yeni bir çerçeve (frame) ekler ve fonksiyon tamamlandığında bu çerçeveyi çıkarır. 
 Bu, LIFO prensibine göre çalışır çünkü en son eklenen çerçeve (yani en son çağrılan fonksiyon) ilk çıkarılır. 
-Aynı şekilde, derinlik öncelikli arama (DFS - Depth First Search) algoritması da LIFO prensibini kullanır. 
-DFS, bir düğümü ziyaret ettiğinde, tüm komşularını bir yığına ekler ve daha sonra yığının en üstündeki 
-(yani en son eklenen) düğümü ziyaret eder. Bu, DFS’nin bir ağacın veya grafiğin derinliklerine öncelik vermesini sağlar.
+
 
 
 """
