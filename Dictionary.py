@@ -16,9 +16,11 @@ print(dictionary)  # çıktı: {'yeni_anahtar': 'yeni_değer'}
 del dictionary['anahtar1']
 print(dictionary)  # çıktı: {'anahtar2': 'değer2'}
 
-# Dictionary'de veri arama işlemi
-print('anahtar1' in dictionary)  # çıktı: True
-print('anahtar3' in dictionary)  # çıktı: False
+# Dictionary'de verinin var olup olmadığını tespit etmek.
+# Bunu in dictionary kalıbıylada __contains__ kalıbıylada yapabiliriz.
+print('anahtar1' in dictionary)  # çıktı: False
+print('anahtar3' in dictionary)  # çıktı: True
+print(dictionary.__contains__("anahtar1"))  # çıktı: False
 
 """
 Python’da, bir dictionary, anahtar-değer çiftlerini saklayan ve dinamik bir veri yapısıdır. Her anahtar benzersizdir 
