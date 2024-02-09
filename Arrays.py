@@ -6,7 +6,7 @@ def search(x):
     numbers = arr.array('i', [10, 20, 30])
 
     # Sayaçları deklare ederiz.
-    cCounter = 0  # Komut satırından alınan değerin tespiti için sayaç
+    cCounter = 0  # # Dizide gezerken hangi index değerinde olduğumuzu tespit etmek için sayaç oluştururuz.
 
     #  Değeri verilmiş verinin index'ini arama
     for k in numbers:
