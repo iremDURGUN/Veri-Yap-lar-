@@ -20,5 +20,7 @@
 3) Yeniden Kullanılabilirlik: Veri yapıları, birden fazla programda kullanılabilir ve aynı işlem için her seferinde kod yazma ihtiyacını azaltır.
 4) Bakım Kolaylığı: İyi tasarlanmış veri yapıları, programları anlamak, değiştirmek ve bakımını yapmak için kolaylaştırır.
 
+#### Big O Notation: Algoritmanın performansını ölçmek için kullanılan bir yöntemdir. Bir algoritmanın işlem süresinin veya bellek kullanımının en kötü durumda (Worst-Case) nasıl çalışacağını gösterir. Big O Notasyonu bir algoritmanın büyüme hızını temsil eder. Örneğin, bir algoritmanın işlem süresi n değişkenine bağlı olarak artıyorsa, bu algoritmanın Big O Notasyonu O(n) olur.
 
 ### Veri yapılarınının nasıl oluşturulduğunun, search(veri arama), delete(veri silme), append(veri ekleme) işlemlerinin ayrı ayrı her veri yapısında nasıl yapıldığının açıklaması yukarıda -dosyalarda- anlatılmıştır.
+### Big O notasyonu hakkında konu anlatımı ve her veri yapısının Append, Delete ve search işlemleri için hesaplamaları Big_O_Notation(complexity) dosyasında bulunmaktadır.
