@@ -161,6 +161,7 @@ q.appendQueue('Ayşe')
 q.appendQueue('Zeynep')
 q.appendQueue('Merve')
 
+
 # Eleman silmek için fonksiyon çağrılarak çalıştırılır.
 # print(q.deleteQueue())
 
@@ -247,17 +248,23 @@ class NodeForLinkedList:
 class LinkedList:
     def __init__(self):
         self.head = None
+        self.current = None
+
+    def __iter__(self):
+        node = self.head
+        while node is not None:
+            yield node
+            node = node.next
 
     # Linked List'e veri ekleme işlemi gerçekleştirilir
     def appendLinkedList(self, data):
+        new_node = NodeForLinkedList(data)
         if not self.head:
-            self.head = NodeForLinkedList(data)
+            self.head = new_node
+            self.current = self.head
         else:
-            current = self.head
-
-            while current.next:
-                current = current.next
-            current.next = NodeForLinkedList(data)
+            self.current.next = new_node
+            self.current = self.current.next
 
     # Linked List'den veri silme işlemi gerçekleştirilir
     def deleteLinkedList(self, data):
@@ -275,7 +282,6 @@ class LinkedList:
 
     # Linked List'de veri arama işlemi gerçekleştirilir
     def searchLinkedList(self, item):
-
         current = self.head
         count = 0
         while current:
@@ -310,7 +316,7 @@ new_linkedlist.appendLinkedList('Mirza')
 # new_linkedlist.print_list()
 
 # Eleman aramak için fonksiyon çağrılarak çalıştırılır.
-# new_linkedlist.searchLinkedList('Zeynep')
+new_linkedlist.searchLinkedList('Zeynep')
 
 
 # DICTIONARY (MAP - HASHMAP)
@@ -321,6 +327,7 @@ def appendDictionary(key, value):
     print(dictionary)
     dictionary[key] = value
     print(dictionary)
+
 
 # Eleman eklemek için fonksiyon çağrılarak çalıştırılır.
 # appendDictionary('Ali Pek', 500)
@@ -398,7 +405,7 @@ Oueue' da: Silme(Delete) İşlemi: O(n) , Arama(Search) İşlemi: O(n) , Ekleme(
 
 Stack' de: Silme(Delete) İşlemi: O(1) , Arama(Search) İşlemi: O(n) , Ekleme(Append) İşlemi: O(1)
 
-Linked List' de: Silme(Delete) İşlemi: O(n) , Arama(Search) İşlemi: O(n) , Ekleme(Append) İşlemi: O(n)
+Linked List' de: Silme(Delete) İşlemi: O(n) , Arama(Search) İşlemi: O(n) , Ekleme(Append) İşlemi: O(1)
 
 Dictionary (MAP - HASHMAP)' de : Silme(Delete) İşlemi: O(n) , Arama(Search) İşlemi: O(1) , Ekleme(Append) İşlemi: O(1)
 
