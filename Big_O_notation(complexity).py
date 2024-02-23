@@ -254,6 +254,7 @@ class LinkedList:
             self.head = NodeForLinkedList(data)
         else:
             current = self.head
+
             while current.next:
                 current = current.next
             current.next = NodeForLinkedList(data)
@@ -305,8 +306,7 @@ new_linkedlist.appendLinkedList('Mirza')
 # Eleman silmek için fonksiyon çağrılarak çalıştırılır.
 # new_linkedlist.deleteLinkedList('Merve')
 
-# linked list'in o an ki haliyle çıktı verir
-# print('Linked Listin son hali;')
+# linked list'in o an ki son verinin çıktısını verir
 # new_linkedlist.print_list()
 
 # Eleman aramak için fonksiyon çağrılarak çalıştırılır.
@@ -357,11 +357,11 @@ def searchDictionary(x):
 
 Big(O) Notation:
 Big(O) notasyonu, bir algoritmanın performansını veya karmaşıklığını ifade etmek için kullanılan bir notasyondur.
-Genellikle bir algoritmanın en kötü durum senaryosundaki (Worst Case) çalışma süresini veya 
+Genellikle bir algoritmanın en kötü durum senaryosundaki (Worst Case) çalışma süresini ve
 gereken bellek miktarını belirtmek için kullanılır.
 
 Bir algoritmanın girdi boyutuna bağlı olarak nasıl artacağını gösterir. Genellikle n ile gösterilir.
-Örneğin bir algoritmanın karmaşıklığı O(n) ise algoritmada çalışma süresinin girdi boyutuyla doğru orantılıdır.
+Örneğin bir algoritmanın karmaşıklığı O(n) ise algoritmada çalışma süresi girdi boyutuyla doğru orantılıdır.
 Yani girdi sayısı iki katına çıktığında çalışma süreside iki katına çıkar.
 
 Bazı Big(o) Notasyonları;
@@ -372,21 +372,24 @@ O(n^2): Bu notasyon karesel zamanı gösterir. Girdi boyutu arttıkça çalışm
 O(logn): Bu notasyon logaritmik zamanı gösterir. Girdi boyutu arttıkça çalışma süresi logaritmik olarak artar.
 
 Bu notasyonlar algoritmaların performansını karşılaştırmak ve problem için hangisinin 
-daha uygun olduğunu karar vermemizi sağlar. Her algoritmanın farklı karmaşıklığı olabilir 
-bu da o algoritmanın problemi çözme yeteneğini gösterir. Bizlerde algoritmamızı belirlerken bundan yararlanırız.
+daha uygun olduğunu karar vermemizi sağlar. Bir problemin birden fazla çözüm yolu yani algoritması olabilir.
+Her algoritmanın da farklı karmaşıklığı olabilir. Bu da problem için birden çok çözüm bulunabileceğini ve
+bu çözümler arasında karmaşıklığı en verimli olan algoritmayı seçerek hareket etmemiz gerektiğinin anlamına gelmektedir.
 
 Bir algoritmanın Big O notasyonunu tespit etmek için ilk olarak işlem süresi analiz edilir. 
-Örneğin algoritmadaki döngülerin sayısını ve iç içe döngülerin karmaşıklığına bakılır.
+Örneğin algoritmadaki döngülerin ve iç içe döngülerin sayısına bakılır.
 
 İkinci olarak algoritmanın işlem süresi matematiksel olarak ifade edilmelidir. 
-Örneğin iki iç içe for döngüsünün genellikle matematiksel olarak ifadesi O(n^2)' dir.
+Örneğin iki iç içe for döngüsünün matematiksel olarak ifadesi O(n^2)' dir.
 
-Üçüncü olarak algoritmanın en kötü durumunu - en yavaş çalıştığı düşünmek gerekmektedir.
+Üçüncü olarak algoritmanın en kötü durumunu - en yavaş çalıştığı durum olarak düşünmek gerekmektedir.
 Örneğin bir dizide eleman ararken aradığımız elemanın dizinin sonunda olması veya hiç olmaması
 tüm diziyi gezerek tek tek arama yapmak zorunda kalmamız demektir.
 
 Son olarak çalışma ve bellek süresini Big O notasyonu şeklinde (matematiksel olarak) ifade etmemiz gerekmektedir.
 
+
+Aşağıdaki karmaşıklık ifadeleri yukarıda veri yapıları için yazdığımız method'lar için hesaplanmıştır.
 Sırayla bakıcak olursak;
 
 Array' de: Silme(Delete) İşlemi: O(n) , Arama(Search) İşlemi: O(1) , Ekleme(Append) İşlemi: O(n)
@@ -404,7 +407,7 @@ Bu karmaşıklık analizlerine bakarsak her method için farklı durumlar vardı
 Bizim geliştirmek istediğimiz algoritma için kullanılacak yapıyı iyi analiz ederek seçmemiz gerekir.
 
 Eğer Array seçersek arama işlemini çok hızlı şekilde çalıştıra biliriz.
-Oueue' yi seçersek yapıdan çok hızlı eleman çıkartılır veya eklenir. Ama arama işlemi yavaş olur.
+Oueue' yu seçersek yapıdan çok hızlı eleman çıkartılır veya eklenir. Ama arama işlemi yavaş olur.
 Stack' i seçersek yapıdan çok hızlı eleman çıkartılır veya eklenir. Ama arama işlemi yavaş olur.
 Linked List' i seçersek tüm işlemleri veri girişine paralel olarak sabit zamanda yapabiliriz.
 Dictionary' yi seçersek eleman ekleme ve arama işlemlerini çok hızlı yaparız ama eleman silme işlemi yavaş olur.
